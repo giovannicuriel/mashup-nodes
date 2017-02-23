@@ -1,0 +1,15 @@
+{
+    "name"         : "node-red-contrib-middleware",
+    "version"      : "0.0.1",
+    "description"  : "The middleware nodes for node-red",
+    "dependencies": {
+    },
+    "keywords": [ "node-red" ],
+    "node-red"     : {
+        "nodes": {
+            "ngsisubscriber": "nodes/1-ngsisubscriber.js",
+            "history": "nodes/2-history.js",
+            "device": "nodes/3-device.js"
+        }
+    }
+}
