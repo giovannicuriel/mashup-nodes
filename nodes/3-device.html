@@ -37,7 +37,7 @@
 
            $.getJSON('http://localhost:5000/device', function (data) {
                $.each(data.devices, function(index,item) {
-                 select.options[select.options.length] = new Option(item.label, index);
+                 select.options[select.options.length] = new Option(item.label, item.id);
                });
            });
         }

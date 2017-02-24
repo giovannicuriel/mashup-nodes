@@ -1,36 +1,20 @@
 # middleware-IoT
 
-Integration of new Nodes to customize the node-red node collection.
+Set of nodes to ease the usage of fiware-related features and platform-managed devices
+in node-red.
 
-## Run
+## Disclaimer
 
-If you want to run the latest code from git, here's how to get started:
+For now such nodes are not operational on node-red itself, but are props to the
+node-red-orchestrator package that composes CPqD's IoT middleware platform.
 
-1. Create a link to middleware-IoT
+## Running
 
-        cd middleware-IoT
-        sudo npm link
+To  install this custom set of nodes on node red, use the commands below, where **__$node_home__**
+is the user's node-red home directory, usually **__~/.node-red__**; and **__$package_path__** is
+the path to where this repository has been cloned into.
 
-2. Clone the code:
-
-        git clone https://github.com/node-red/node-red.git
-        cd node-red
-
-3. Link the node-red with middleware-IoT
-
-        npm link node-red-contrib-middleware
-
-4. Install the node-red dependencies
-
-        npm install
-
-5. Build the code
-
-        npm run build
-
-6. Run
-
-        npm start
-   or
-
-        node red.js
+```shell
+$ cd $node_home               # usually ~/.node-red
+$ npm install $package_path   # dir where this has been cloned
+```
