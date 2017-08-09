@@ -6,6 +6,8 @@ RUN cd /usr/src/node-red/node_modules/node-red/nodes/core; \
     awk '{system("mv "$1" "$1".ign")}';
 RUN cd /usr/src/node-red/node_modules;  ls -1 | grep 'node-red-node' | xargs rm -rf
 COPY node_modules /data/node_modules
-USER root:root
+USER root
+RUN chown -R node-red:node-red /data/node_modules
+USER node-red
 RUN cd /data && npm install
 
